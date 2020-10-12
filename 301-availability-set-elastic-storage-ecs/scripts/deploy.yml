@@ -14,6 +14,13 @@ autonames:
 #    - ecs05
 #    - ecs06
 
+- task: SnykSecurityScan@0
+  inputs:
+    serviceConnectionEndpoint: 'cysnyk'
+    testType: 'app'
+    monitorOnBuild: true
+    failOnIssues: true
+
 # [Required]
 # Deployment facts reference
 facts:
